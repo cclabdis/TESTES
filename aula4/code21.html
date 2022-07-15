@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+<script>
+function relogio() {
+var agora=new Date();
+var h=agora.getHours();
+var m=agora.getMinutes();
+var s=agora.getSeconds();
+    m = verificar(m);
+    s = verificar(s);
+    document.getElementById('hora_certa').innerHTML = h+":"+m+":"+s;
+var tempo = setTimeout(function(){relogio()},500); // repete a função relógio a cada 500 milisegundos, ou seja, a cada O,5 segundos atualiza a função
+}
+function verificar(i) {
+    if (i<10) {i = "0" + i};  // adicina um zero antes dos números menores que 10
+    return i;
+}
+</script>
+</head>
+<body onload="relogio()">
+<h1>Hora certa - <span id="hora_certa"></span></h1>
+</body>
+</html>
