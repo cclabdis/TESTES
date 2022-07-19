@@ -5,19 +5,14 @@
   <head>
     <meta charset="utf-8">
     <title> Doc de teste </title>
-
       <script>
         function Maior(array) {
           let maior = array[0];
-          for (let i = 1; i < array.length; i++) {
-              let a = array[i];
-               if (a > maior) {
-                  maior = a;
-              }
-          }
+          for (let i = 1; i < array.length; i++) 
+              if (array[i] > maior)  maior = array[i];
           return maior;
         }
-        let arr = [2,9,1,6,7,4];
+        let arr = [2,9,5475876781,6,7,4];
         console.log(Maior(arr));
       </script>
 
